@@ -1,12 +1,25 @@
-// Function for adding two numbers
-function add(num1, num2) {
-    console.log("Adding " + num1 + " and " + num2);
-    var sum = num1 + num2;
-    return sum;
+// Imports
+var readLineSync = require('readline-sync');
+
+// Global variables
+var score = 0;
+
+// Function definition
+function play(question, answer) {
+    var userAnswer = readLineSync.question(question);
+
+    if (userAnswer === answer) {
+        score = score + 1;
+        console.log("You are right!");
+    } else {
+        score = score - 1;
+        console.log("You are wrong!");
+    }
 }
 
-// Call function
-var sum = add(5, 10);
+// Calling the function
+play("In which year did India gain freedom? ", "1947")
+play("What is the capital of Tamil Nadu? ", "Chennai")
 
-// Display sum
-console.log("Sum = " + sum);
+// Display
+console.log("Your score is " + score);

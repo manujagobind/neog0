@@ -1,22 +1,12 @@
-// Imports
-var readLineSync = require('readline-sync');
-
-// Variables
-var score = 0;
-
-// User input
-var userAns = readLineSync.question("Are you older than 25? ");
-
-
-console.log("You entered " + userAns)
-
-// App logic
-if (userAns === "yes") {
-    score = score + 1;
-    console.log("You are right!");
-} else {
-    score = score - 1;
-    console.log("You are wrong");
+// Function for adding two numbers
+function add(num1, num2) {
+    console.log("Adding " + num1 + " and " + num2);
+    var sum = num1 + num2;
+    return sum;
 }
 
-console.log("You score is " + score);
+// Call function
+var sum = add(5, 10);
+
+// Display sum
+console.log("Sum = " + sum);

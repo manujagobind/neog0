@@ -93,10 +93,15 @@ function playLevel(level) {
     console.log(`Playing level ${level}`);
 
     questions = levelSetup(level);
-    console.log(`This level has ${questions.length} rounds.`);
-
     var count_consecutive_fail = 0;
     var score = 0;
+
+    if (questions === null) {
+        GAME_OVER = true;
+        return score;
+    }
+
+    console.log(`This level has ${questions.length} rounds.`);    
     
     for (var index = 0 ; index < questions.length ; index++) {
 

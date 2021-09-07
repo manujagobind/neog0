@@ -142,6 +142,8 @@ function startGame() {
             console.log("Sorry you have a low score. You cannot proceed to the next level.");
             break;
         }
+
+        levelScore = 0;
     }
 
     console.log(`Final score: ${totalScore}`);

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
     <title>Gobind's Component Library</title>
 </head>
 <body>
@@ -21,15 +22,15 @@
 
     <h1>@containers</h1>
     <h2>Container</h2>
-    <div>This is a container. It takes the full width.</div>
+    <div class="container">This is a fluid container. It takes the full width.</div>
     <h2>Centered container</h2>
-    <div>This is a centered container. It takes space upto a max width.</div>
+    <div class="container container-center">This is a centered container. It takes space upto a max width.</div>
     <hr>
 
-    <h1>@links</h1>
-    <a href="">Primary link</a>
-    <a href="">Secondary link</a>
-    <p>Notice how links are inline. Both links appeared on the same line.</p>
+    <h1 id="links-title">@links</h1>
+    <a class="link button button-primary" href="">Primary link</a>
+    <a class="link button" href="">Secondary link</a>
+    <p class="info">Notice how links are inline. Both links appeared on the same line.</p>
     <hr>
 
     <h1>@lists</h1>
@@ -41,19 +42,19 @@
         <li>Item 3</li>
     </ul>
     <p>This is an unordered list without any bullets</p>
-    <ul>
+    <ul class="list-no-bullets">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
     <p>This is an unordered list which is also inline</p>
     <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li class="list-item-inline">Item 1</li>
+        <li class="list-item-inline">Item 2</li>
+        <li class="list-item-inline">Item 3</li>
     </ul>
     <p>This is an ordered list without numbers in reverse</p>
-    <ol>
+    <ol reversed>
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
@@ -61,12 +62,18 @@
     <hr>
 
     <h1>@nav</h1>
-    <nav>
-        <h2>Brand Name</h2>
+    <nav class="nav">
+        <h3 class="brand">Brand Name</h3>
         <ul>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Blog</li>
+            <li class="list-item-inline">
+                <a class="link link-active" href="">About</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="">Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="">Blog</a>
+            </li>
         </ul>
     </nav>
     <hr>

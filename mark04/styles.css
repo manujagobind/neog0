@@ -6,12 +6,12 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 hr {
     margin: 2rem 0rem;
 }
-
 
 .container {
     padding: 0rem 2rem;
@@ -76,5 +76,42 @@ p.info {
 }
 
 .nav .link {
+    color: white;
+}
+
+.header .header-img {
+    margin: 0 5rem;
+}
+
+.header .header-text {
+    text-align: center;
+}
+
+.header .header-text-inverted {
+    color: var(--primary-color);
+}
+
+.section {
+    padding: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: bold;
+    max-width: 500px;
+}
+
+.section-gray {
+    background-color: gray;
+    color: white;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    border-top-right-radius: 3rem;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer .link {
     color: white;
 }

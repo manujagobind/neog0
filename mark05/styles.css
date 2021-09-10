@@ -126,3 +126,12 @@ p.info {
 .footer .link {
     color: white;
 }
+
+.blog-subtitle {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.blog-content {
+    text-align: justify;
+}

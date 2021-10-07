@@ -10,3 +10,6 @@
 - Read about CSS box model and CSS units.
 - Check how zoom affects different CSS units.
 - Read about BEM.
+- Read about ```var``` vs ```let``` in JavaScript.
+- Read about Document object model
+- Read about Design patterns behind browser events

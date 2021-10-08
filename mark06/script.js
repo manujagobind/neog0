@@ -5,9 +5,7 @@ OUTPUT_DIV_SELECTOR = "#output";
 ERR_NO_TEXT_AREA = "Input textarea not found";
 ERR_NO_TEXT="You did not enter any text. Please try again.";
 
-STYLE_MARGIN = "10px"
-
-API_URL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text="
+API_URL = "https://api.funtranslations.com/translate/minion.json"
 
 var buttonElement = document.querySelector(BUTTON_SELECTOR);
 var textAreaElement = document.querySelector(TEXT_SELECTOR);
@@ -16,7 +14,6 @@ var outputDivElement = document.querySelector(OUTPUT_DIV_SELECTOR);
 
 function updateTranslatedText(divElement, text) {
     if (divElement != null) {
-        divElement.style.marginTop = STYLE_MARGIN;
         divElement.innerText = text;
     } else {
         alert("Translation result:" + text);
@@ -43,8 +40,7 @@ function handleButtonClick() {
         return;
     }
 
-    var url = encodeURI(API_URL + inputText);
-    var url = API_URL + inputText;
+    var url = API_URL + "?text=" + inputText;
     fetch(url)
         .then(response => response.json())
         .then(response => {

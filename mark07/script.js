@@ -4,8 +4,9 @@ OUTPUT_DIV_SELECTOR = "#output";
 
 ERR_NO_TEXT_AREA = "Input textarea not found";
 ERR_NO_TEXT="You did not enter any text. Please try again.";
+STYLE_COLOR_ERR = "red";
 
-API_URL = "https://api.funtranslations.com/translate/minion.json"
+API_URL = "https://api.funtranslations.com/translate/ferb-latin.json"
 
 var buttonElement = document.querySelector(BUTTON_SELECTOR);
 var textAreaElement = document.querySelector(TEXT_SELECTOR);
@@ -17,6 +18,16 @@ function updateTranslatedText(divElement, text) {
         divElement.innerText = text;
     } else {
         alert("Translation result:" + text);
+    }
+}
+
+
+function updateErrorMessage(divElement, msg) {
+    if (divElement != null) {
+        divElement.style.color = STYLE_COLOR_ERR;
+        updateTranslatedText(divElement, msg)
+    } else {
+        alert("Error:" + text);
     }
 }
 
@@ -44,8 +55,14 @@ function handleButtonClick() {
     fetch(url)
         .then(response => response.json())
         .then(response => {
-            translatedText = response['contents']['translated'];
-            updateTranslatedText(outputDivElement,   translatedText);
+
+            if ('error' in response) {
+                updateErrorMessage(outputDivElement, response['error']['message']);
+            } else {
+                translatedText = response['contents']['translated'];
+                updateTranslatedText(outputDivElement,   translatedText);
+            }
+            
         })
         .catch(error => {
             console.log("An error occured: " + error);

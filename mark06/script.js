@@ -2,41 +2,58 @@ BUTTON_SELECTOR = "#btn";
 TEXT_SELECTOR = "#text";
 OUTPUT_DIV_SELECTOR = "#output";
 
-STYLE_COLOR_SUCCESS = "green";
-STYLE_COLOR_ERR = "red";
+ERR_NO_TEXT_AREA = "Input textarea not found";
+ERR_NO_TEXT="You did not enter any text. Please try again.";
+
 STYLE_MARGIN = "10px"
+
+API_URL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text="
 
 var buttonElement = document.querySelector(BUTTON_SELECTOR);
 var textAreaElement = document.querySelector(TEXT_SELECTOR);
 var outputDivElement = document.querySelector(OUTPUT_DIV_SELECTOR);
 
-var textAreaContent = null;
+
+function updateTranslatedText(divElement, text) {
+    if (divElement != null) {
+        divElement.style.marginTop = STYLE_MARGIN;
+        divElement.innerText = text;
+    } else {
+        alert("Translation result:" + text);
+    }
+}
+
 
 function handleButtonClick() {
 
+    var inputText = null;
+    var translatedText = null;
+
     if (textAreaElement != null) {
-        textAreaContent = textAreaElement.value;
-    }
-
-    var isTextNullOrEmpty = textAreaContent == null || textAreaContent == "";
-
-    var displayText = !isTextNullOrEmpty ? 
-        "You have entered: " + textAreaContent : 
-        "You did not enter any text. Please try again.";
-
-    if (outputDivElement != null) {
-
-        outputDivElement.style.marginTop = STYLE_MARGIN;
-        if (isTextNullOrEmpty) {
-            outputDivElement.style.color = STYLE_COLOR_ERR;
-        } else {
-            outputDivElement.style.color = STYLE_COLOR_SUCCESS;
-        }
-
-        outputDivElement.innerText = displayText;
+        inputText = textAreaElement.value;
     } else {
-        alert(displayText);
+        alert(ERR_NO_TEXT_AREA);
+        return;
     }
+
+    var isTextNullOrEmpty = inputText == null || inputText == "";
+
+    if (isTextNullOrEmpty) {
+        alert(ERR_NO_TEXT);
+        return;
+    }
+
+    var url = encodeURI(API_URL + inputText);
+    var url = API_URL + inputText;
+    fetch(url)
+        .then(response => response.json())
+        .then(response => {
+            translatedText = response['contents']['translated'];
+            updateTranslatedText(outputDivElement,   translatedText);
+        })
+        .catch(error => {
+            console.log("An error occured: " + error);
+        });
 }
 
 if (buttonElement != null) {

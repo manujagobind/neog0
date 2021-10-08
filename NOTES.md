@@ -13,3 +13,4 @@
 - Read about ```var``` vs ```let``` in JavaScript.
 - Read about Document object model
 - Read about Design patterns behind browser events
+- Read about Promise design pattern / async programming

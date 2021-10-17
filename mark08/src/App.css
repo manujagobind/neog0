@@ -11,3 +11,8 @@ header {
     padding: 10px;
     text-align: center;
 }
+
+.li-inline {
+    display: inline;
+    padding: 1rem;
+}

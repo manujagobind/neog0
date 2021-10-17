@@ -47,11 +47,19 @@ function App() {
         }
     }
 
+    function handleOnClick(emoji) {
+        setText(emoji + " means " + emojiDict[emoji]);
+    }
+
     return (
         <div>
             <header>Inside Outttt</header>
             <input onChange={handleOnChange} placeholder="Enter emoji here" className="centered-obj"/>
             <p className="centered-obj">{text}</p>
+            <ul className="centered-obj">
+                {Object.keys(emojiDict).map( (emoji) => 
+                <li className="li-inline" key={emoji} onClick={ () => handleOnClick(emoji)}>{emoji}</li> )}
+            </ul>
         </div>
     );
 }

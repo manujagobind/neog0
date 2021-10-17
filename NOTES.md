@@ -14,4 +14,4 @@
 - Read about Document object model
 - Read about Design patterns behind browser events
 - Read about Promise design pattern / async programming
-- Imperitive vs eclarative vs Component based
+- Imperitive vs declarative vs Component based

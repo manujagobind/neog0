@@ -1,16 +1,20 @@
+import { useState } from 'react';
 import './App.css';
 
-var likeCounter = 0;
-function handleLike() {
-    likeCounter++;
-    console.log("Liked", likeCounter);
-}
-
 function App() {
+
+    const [likeCounter, setLikeCounter] = useState(0);
+
+    function handleLike() {       
+        var newLikeCounter = likeCounter + 1;        
+        setLikeCounter(newLikeCounter);
+    }
+
     return (
         <div>
             <header>Inside Outttt</header>
             <button onClick={handleLike}>Like</button>
+            <p>{likeCounter}</p>
         </div>
     );
 }

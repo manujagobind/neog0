@@ -1,15 +1,7 @@
 import React  from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
-
-function App() {
-    return (
-        <div>
-            <header>Inside Outttt</header>
-        </div>
-    );
-}
+import App from './App.js';
 
 ReactDOM.render(
     <React.StrictMode>

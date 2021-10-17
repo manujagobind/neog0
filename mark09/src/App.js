@@ -37,7 +37,7 @@ var appData = {
 
 function BookInfo(props) {
     return (
-        <div class="book-info">
+        <div className="book-info">
             <h2>{props.title}</h2>
             <p>{props.rating}/5</p>
         </div>
@@ -47,7 +47,7 @@ function BookInfo(props) {
 function BookList(props) {    
     return (
         props.books.map( (book) =>
-            <BookInfo title={book.title} rating={book.rating} />
+            <BookInfo key={book.title} title={book.title} rating={book.rating} />
         )
     );
 }
@@ -63,6 +63,7 @@ function App() {
     return (
         <div className="app-container">
             <header>📚 goodbooks</header>
+            <p>Check out my favourite books. Select a genre to get started.</p>
             {Object.keys(appData).map( (category) => 
                 <button key={category} onClick={ () => toggleBookList(category) }>{category}</button>
             )}

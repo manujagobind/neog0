@@ -1,6 +1,10 @@
+body {
+    background-color: antiquewhite;
+}
+
 .app-container {    
     width: 70%;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
 
 header {
@@ -13,6 +17,8 @@ header {
     border-radius: 1rem;
     padding: 15px;
     margin: 10px 0;
+    width: 50%;
+    background-color: white;
 }
 
 .book-info h2 {
@@ -27,11 +33,13 @@ header {
 button {
     padding: 0.5rem;
     margin: 10px 10px 10px 0;
-    background-color: white;
-    border: 1px solid gray;
+    background-color: lightblue;
+    color: darkblue;
+    border: 1px solid darkblue;
     border-radius: 0.5rem;
+    font-weight: bold;
 }
 
 button:hover {
-    
+    cursor: pointer;
 }

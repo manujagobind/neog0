@@ -30,7 +30,7 @@ header {
     margin: 0;
 }
 
-button {
+.button {
     padding: 0.5rem;
     margin: 10px 10px 10px 0;
     background-color: lightblue;
@@ -40,6 +40,10 @@ button {
     font-weight: bold;
 }
 
-button:hover {
+.button:hover {
     cursor: pointer;
+}
+
+.button-active {
+    border: 2px solid darkblue;
 }

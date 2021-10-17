@@ -60,12 +60,23 @@ function App() {
         setCurrentCategory(category);
     }
 
+    function getBtnStyle(category) {
+        var style = "button";
+        
+        if (category === currentCategory) {
+            style += " button-active";
+        }
+
+        return style;
+    }
+
     return (
         <div className="app-container">
             <header>📚 goodbooks</header>
             <p>Check out my favourite books. Select a genre to get started.</p>
             {Object.keys(appData).map( (category) => 
-                <button key={category} onClick={ () => toggleBookList(category) }>{category}</button>
+                <button key={category} className={getBtnStyle(category)}
+                onClick={ () => toggleBookList(category) }>{category}</button>
             )}
             <hr />
             <BookList books={appData[currentCategory]} />

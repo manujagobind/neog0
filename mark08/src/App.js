@@ -3,18 +3,17 @@ import './App.css';
 
 function App() {
 
-    const [likeCounter, setLikeCounter] = useState(0);
+    const [text, setText] = useState(null);
 
-    function handleLike() {       
-        var newLikeCounter = likeCounter + 1;        
-        setLikeCounter(newLikeCounter);
+    function handleOnChange(event) {      
+        setText(event.target.value);
     }
 
     return (
         <div>
             <header>Inside Outttt</header>
-            <button onClick={handleLike}>Like</button>
-            <p>{likeCounter}</p>
+            <input onChange={handleOnChange} placeholder="Type something here" />
+            <p>{text}</p>
         </div>
     );
 }

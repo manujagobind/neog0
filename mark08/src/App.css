@@ -1,0 +1,18 @@
+header {
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
+.centered-obj {
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+}
+
+.li-inline {
+    display: inline;
+    padding: 1rem;
+}

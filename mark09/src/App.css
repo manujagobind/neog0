@@ -2,3 +2,36 @@
     width: 70%;
     margin: 0 auto;
 }
+
+header {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.book-info {
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.book-info h2 {
+    font-weight: normal;
+    margin: 0;
+}
+
+.book-info p {
+    margin: 0;
+}
+
+button {
+    padding: 0.5rem;
+    margin: 10px 10px 10px 0;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    
+}

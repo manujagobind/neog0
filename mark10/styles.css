@@ -28,6 +28,10 @@ section {
     font-size: large;
 }
 
+.hidden {
+    display: none;
+}
+
 .input {
     width: 18rem;
     height: 2.5rem;

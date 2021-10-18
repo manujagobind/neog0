@@ -10,6 +10,7 @@ const ERR_CASH_AMT_INVALID = "Cash amount must be a positive integer.";
 const ERR_CASH_AMT_NOT_SUFFICIENT = "Cash amount is not sufficient."
 
 const STYLE_DISPLAY_BLOCK = "block";
+const STYLE_DISPLAY_INLINE_BLOCK = "inline-block";
 const STYLE_DISPLAY_NONE  = "none";
 
 const DENOMINATION = [2000, 500, 100, 20, 10, 5, 1];
@@ -113,7 +114,8 @@ function handleInputBillAmt(event) {
 
     if (input.trim().length > 0) {
         cashAmtLabelElement.style.display = STYLE_DISPLAY_BLOCK;
-        cashAmtInputElement.style.display = STYLE_DISPLAY_BLOCK;
+        cashAmtInputElement.style.display = STYLE_DISPLAY_INLINE_BLOCK;
+        // TODO: need to understand why display: block didn't align the input field in the center
     } else {
         cashAmtLabelElement.style.display = STYLE_DISPLAY_NONE;
         cashAmtInputElement.style.display = STYLE_DISPLAY_NONE;

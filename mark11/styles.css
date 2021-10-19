@@ -31,6 +31,10 @@ body {
     padding: 0 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 .button-primary {
     width: 7rem;
     height: 2rem;
@@ -39,6 +43,10 @@ body {
     color: white;
     border-radius: 1rem;
     margin: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .li-inline {

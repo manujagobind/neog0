@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #1D4ED8;
+    --primary-light: aliceblue;
+}
+
+body {
+    background-color: var(--primary-light);
+}
+
+.heading h1 {
+    color: var(--primary-color);
+}

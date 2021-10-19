@@ -5,6 +5,9 @@
 
 body {
     background-color: var(--primary-light);
+    margin: 2rem auto;
+    width: 70%;
+    text-align: center;
 }
 
 .heading h1 {

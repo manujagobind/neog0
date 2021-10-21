@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './nav.css';
 
@@ -20,11 +21,13 @@ class Navbar extends React.Component {
             <nav className="nav">
                 <ul>
                     {this.props.nav.map( (navItem, index) =>
-                        <li key={index}
-                            onClick={() => this.toggleNav(index)}
-                            className={"nav-item " + (index === this.state.activeNavIndex ? "nav-item-active" : "")}>
-                            {navItem.title}
-                        </li>
+                        <Link key={index} to={navItem.route}>
+                            <li
+                                onClick={() => this.toggleNav(index)}
+                                className={"nav-item " + (index === this.state.activeNavIndex ? "nav-item-active" : "")}>
+                                {navItem.title}
+                            </li>
+                        </Link>
                     )}
                 </ul>
             </nav>

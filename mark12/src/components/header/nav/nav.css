@@ -1,0 +1,17 @@
+.nav ul {
+    text-align: right;
+}
+
+.nav-item {
+    display: inline;
+    padding: 1rem;
+    color: var(--primary-light);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-item-active {
+    color: var(--primary-color);
+    background-color: var(--primary-light);
+    border-top-left-radius: 1rem;
+}

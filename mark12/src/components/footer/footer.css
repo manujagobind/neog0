@@ -1,0 +1,26 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: var(--body-width);
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer ul {
+    padding-inline-start: 0px;
+}
+
+.li-inline {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+.li-inline > :first-child {
+    margin-left: 0px !important;
+}

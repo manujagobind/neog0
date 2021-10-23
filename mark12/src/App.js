@@ -16,15 +16,13 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <div className="body">
-                    <Header title={appName} nav={appPages} />
+                <Header title={appName} nav={appPages} /> 
                     <Switch>
                         {appPages.map((page, index) =>
                             <Route key={index} path={page.route} exact component={page.component} />
                         )}
                     </Switch>
-                    <Footer />
-                </div>
+                <Footer />
             </Router>
         );    
     }

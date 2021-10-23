@@ -43,7 +43,11 @@ class AnglesPage extends React.Component {
     }
 
     handleInput(event) {
-        this.setState({[event.target.name]: Number(event.target.value)});
+        if (!doesNotExist(event.target.value)) {
+            this.setState({[event.target.name]: Number(event.target.value)});
+        } else {
+            this.setState({[event.target.name]: null});
+        }
     }
 
     handleSubmit(event) {

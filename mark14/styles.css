@@ -24,6 +24,8 @@ input {
     border: 2px solid var(--primary-color);
     border-radius: 1rem;
     background-color: inherit;
+    padding: 0 10px;
+    color: gray;
 }
 
 .form-submit {

@@ -3,6 +3,43 @@
     --primary-light: aliceblue;
 }
 
-h1 {
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--primary-light);
+}
+
+.heading > h1 {
     color: var(--primary-color);
+}
+
+input, label {
+    display: block;
+    margin: 1rem auto;
+}
+
+input {
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    background-color: inherit;
+}
+
+.form-submit {
+    color: var(--primary-light);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 7rem;    
+    margin: 1rem auto;
+}
+
+label, .display-msg {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }

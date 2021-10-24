@@ -8,7 +8,21 @@
     <title>Stock Profit & Loss</title>
 </head>
 <body>
-    <h1>Stock Proift & Loss Calculator</h1>
+    <header class="heading">
+        <h1>Stock Proift & Loss Calculator</h1>
+    </header>
+    <main>
+        <section>
+            <label for="init-price">Initial Price</label>
+            <input id="init-price" type=number>
+            <label for="qty">Quantity of Stocks</label>
+            <input id="qty" type=number>
+            <label for="curr-price">Current Price</label>
+            <input id="curr-price" type=number>
+            <button class="form-submit" id="form-submit">Tell me!</button>
+            <p class="display-msg hidden"></p>
+        </section>
+    </main>
     <script src="./app.js"></script>
 </body>
 </html>

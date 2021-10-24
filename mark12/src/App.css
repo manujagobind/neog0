@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #1D4ED8;
+    --primary-light: aliceblue;
+    --body-width: 70%;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: var(--body-width);
+    background-color: var(--primary-light);
+    overflow: scroll;
+}
+

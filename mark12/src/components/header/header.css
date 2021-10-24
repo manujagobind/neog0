@@ -1,0 +1,10 @@
+.header {
+    background-color: var(--primary-color);
+    color: var(--primary-light);
+    border-bottom-left-radius: 2rem;
+}
+
+.header .brand {
+    margin: 0;
+    padding: 1rem;
+}

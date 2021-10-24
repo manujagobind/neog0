@@ -1,0 +1,50 @@
+.page-title, .display-msg {
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-group > label {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.input-group > input {
+    display: block;
+    color: grey;
+    background-color: inherit;
+    margin: 1rem auto;
+    height: 2rem;
+    width: 10rem;
+    padding: 0 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+}
+
+.flex-row {
+    display: flex;    
+    justify-content: center;
+    width: 100%;    
+}
+
+.input-group-radio > label {        
+    display: inline;
+}
+
+.input-group-radio > input {    
+    display: inline;
+    width: 2rem;
+    height: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-submit {
+    display: block;
+    height: 2rem;
+    width: 7rem;
+    margin: 2rem auto;
+    color: var(--primary-light);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 1rem;
+}

@@ -3,13 +3,13 @@
     font-weight: bold;
 }
 
-.input-group label {
+.input-group > label {
     display: block;
     font-weight: bold;
     text-align: center;
 }
 
-.input-group input {
+.input-group > input {
     display: block;
     color: grey;
     background-color: inherit;
@@ -19,6 +19,23 @@
     padding: 0 10px;
     border: 2px solid var(--primary-color);
     border-radius: 1rem;
+}
+
+.flex-row {
+    display: flex;    
+    justify-content: center;
+    width: 100%;    
+}
+
+.input-group-radio > label {        
+    display: inline;
+}
+
+.input-group-radio > input {    
+    display: inline;
+    width: 2rem;
+    height: 1rem;
+    margin-bottom: 2rem;
 }
 
 .form-submit {

@@ -9,5 +9,6 @@ body {
     padding: 0;
     width: var(--body-width);
     background-color: var(--primary-light);
+    overflow: scroll;
 }
 

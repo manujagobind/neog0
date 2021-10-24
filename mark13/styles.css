@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #1D4ED8;
+    --primary-light: aliceblue;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--primary-light);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+label, input, button {
+    display: block;    ;
+}
+
+label, .display-msg {
+    font-weight: bold;
+}
+
+input {    
+    height: 2rem;
+    width: 15rem;        
+    padding: 0 10px;
+    color: gray;
+    background-color: inherit;
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    margin: 1rem auto;
+}
+
+button {
+    height: 2rem;
+    width: 7rem;
+    border: none;
+    margin: 1rem auto;
+    background-color: var(--primary-color);
+    color: var(--primary-light);    
+    border-radius: 1rem;
+}
+
+.hidden {
+    display: none;
+}

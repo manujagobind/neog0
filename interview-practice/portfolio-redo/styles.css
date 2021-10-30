@@ -126,4 +126,5 @@ body {
 
 .footer .list-item-inline a {
     color: var(--primary-light);
+    font-size: large;
 }

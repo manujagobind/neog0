@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(57, 57, 235);    
+    --primary-light: white;
+    --light-gray: rgb(216, 211, 211);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.nav {
+    color: var(--primary-light);
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 3rem;    
+}
+
+.nav .brand {
+    margin: 0;
+    padding: 1rem 2rem;
+    font-size: large;
+    font-weight: bold; 
+}
+
+.nav ul {
+    text-align: right;
+}
+
+.list-item-inline {
+    display: inline-block;
+    padding: 1.5rem;    
+}
+
+.nav .list-item-inline a {
+    color: var(--primary-light);
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.link-active {
+    font-weight: bold;
+    font-size: large;
+}
+
+.header {
+    text-align: center;
+}
+
+.header .header-img {
+    border-radius: 2rem;
+}
+
+.header .header-text-inverted {
+    color: var(--primary-color);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.container-gray {
+    background-color: var(--light-gray);
+}
+
+.button {
+    width: 8rem;
+    height: 2.5rem;
+    border: 2px solid var(--primary-color);
+    margin: 1rem 0;
+    color: var(--primary-color);
+    border-radius: 0.7rem;    
+    background-color: inherit;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+
+.button-primary {    
+    background-color: var(--primary-color);
+}
+
+.button-primary a {
+    color: var(--primary-light);
+}
+
+.button a {    
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--primary-light);
+    border-top-right-radius: 2rem;    
+}
+
+.footer .title {
+    font-size: large;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.footer ul {
+    text-align: center;
+    padding-inline-start: 0px;
+    margin: 0;
+}
+
+.footer .list-item-inline a {
+    color: var(--primary-light);
+    font-size: large;
+}
